@@ -57,24 +57,16 @@ MonoBehaviour:
     Poses:
     - name: Happy
       actorState:
-        appearance: 
+        appearance: Happy
         visible: 0
-        position: {x: 0, y: 0, z: 0}
+        position: {x: -3.8400002, y: 0, z: 0}
         rotation: {x: 0, y: 0, z: 0, w: 0}
         scale: {x: 0, y: 0, z: 0}
         tintColor: {r: 0, g: 0, b: 0, a: 0}
         lookDirection: 0
-      overriddenProperties: []
-    - name: Angry
-      actorState:
-        appearance: 
-        visible: 0
-        position: {x: 0, y: 0, z: 0}
-        rotation: {x: 0, y: 0, z: 0, w: 0}
-        scale: {x: 0, y: 0, z: 0}
-        tintColor: {r: 0, g: 0, b: 0, a: 0}
-        lookDirection: 0
-      overriddenProperties: []
+      overriddenProperties:
+      - appearance
+      - position
   references:
     version: 2
     RefIds:

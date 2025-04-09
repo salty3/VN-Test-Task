@@ -82,7 +82,7 @@ MonoBehaviour:
       customData:
         rid: -2
       Pivot: {x: 0.5, y: 0}
-      PixelsPerUnit: 100
+      PixelsPerUnit: 60
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
       CustomTextureShader: {fileID: 0}
@@ -110,27 +110,7 @@ MonoBehaviour:
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
       LinkedPrinter: 
-      Poses:
-      - name: Happy
-        actorState:
-          appearance: 
-          visible: 0
-          position: {x: 0, y: 0, z: 0}
-          rotation: {x: 0, y: 0, z: 0, w: 0}
-          scale: {x: 0, y: 0, z: 0}
-          tintColor: {r: 0, g: 0, b: 0, a: 0}
-          lookDirection: 0
-        overriddenProperties: []
-      - name: Angry
-        actorState:
-          appearance: 
-          visible: 0
-          position: {x: 0, y: 0, z: 0}
-          rotation: {x: 0, y: 0, z: 0, w: 0}
-          scale: {x: 0, y: 0, z: 0}
-          tintColor: {r: 0, g: 0, b: 0, a: 0}
-          lookDirection: 0
-        overriddenProperties: []
+      Poses: []
     - Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
@@ -144,7 +124,7 @@ MonoBehaviour:
       customData:
         rid: -2
       Pivot: {x: 0.5, y: 0}
-      PixelsPerUnit: 100
+      PixelsPerUnit: 60
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
       CustomTextureShader: {fileID: 0}
@@ -172,27 +152,7 @@ MonoBehaviour:
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
       LinkedPrinter: 
-      Poses:
-      - name: Happy
-        actorState:
-          appearance: 
-          visible: 0
-          position: {x: 0, y: 0, z: 0}
-          rotation: {x: 0, y: 0, z: 0, w: 0}
-          scale: {x: 0, y: 0, z: 0}
-          tintColor: {r: 0, g: 0, b: 0, a: 0}
-          lookDirection: 0
-        overriddenProperties: []
-      - name: Angry
-        actorState:
-          appearance: 
-          visible: 0
-          position: {x: 0, y: 0, z: 0}
-          rotation: {x: 0, y: 0, z: 0, w: 0}
-          scale: {x: 0, y: 0, z: 0}
-          tintColor: {r: 0, g: 0, b: 0, a: 0}
-          lookDirection: 0
-        overriddenProperties: []
+      Poses: []
     - Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
@@ -242,7 +202,29 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
     - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  SharedPoses: []
+  SharedPoses:
+  - name: Left
+    actorState:
+      appearance: 
+      visible: 0
+      position: {x: -5.76, y: -5.4, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      scale: {x: 0, y: 0, z: 0}
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      lookDirection: 0
+    overriddenProperties:
+    - position
+  - name: Right
+    actorState:
+      appearance: 
+      visible: 0
+      position: {x: 5.76, y: -5.4, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      scale: {x: 0, y: 0, z: 0}
+      tintColor: {r: 0, g: 0, b: 0, a: 0}
+      lookDirection: 0
+    overriddenProperties:
+    - position
   references:
     version: 2
     RefIds:
