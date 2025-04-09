@@ -144,3 +144,32 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+  - Id: Characters/bd3b6bbe-e6ab-49da-8a4e-043a2024204a
+    Resources: []
+  - Id: Characters/2ffc9de2-5737-4824-a541-c721d5b76ea2
+    Resources:
+    - name: Default
+      pathPrefix: Characters/NPC-1
+      guid: 956ebf8f0e1fc584fa8d7333dc2cae04
+    - name: Happy
+      pathPrefix: Characters/NPC-1
+      guid: b18f0ec83d80df645bcfa7fb90912c64
+    - name: Upset
+      pathPrefix: Characters/NPC-1
+      guid: c0ad0e52132bcec42a2c5659a551fa8d
+  - Id: Scripts
+    Resources:
+    - name: Test
+      pathPrefix: Scripts
+      guid: 68b221eaa68e2124b82f50fe2edcc26e
+  - Id: Characters/706de22c-a541-4fb3-b267-498e0876b7e1
+    Resources:
+    - name: Default
+      pathPrefix: Characters/NPC-2
+      guid: 62c446f5e2f7acb429fd6793705ac9e7
+    - name: Happy
+      pathPrefix: Characters/NPC-2
+      guid: 6459bdd13ff467c43aa27349096bc737
+    - name: Upset
+      pathPrefix: Characters/NPC-2
+      guid: efebbc1182b5f664bb6d8d826749746e
