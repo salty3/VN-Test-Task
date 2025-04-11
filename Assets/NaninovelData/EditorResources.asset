@@ -147,40 +147,57 @@ MonoBehaviour:
     - name: MapUI
       pathPrefix: UI
       guid: fad0f1e1760f39e4896417a1f06368dd
+    - name: QuestUI
+      pathPrefix: UI
+      guid: 3564a49f8067d814398e3b81834134f0
+    - name: MapButton
+      pathPrefix: UI
+      guid: bd3752c94a2d53341ac0f381047b173f
   - Id: Characters/bd3b6bbe-e6ab-49da-8a4e-043a2024204a
     Resources: []
   - Id: Characters/2ffc9de2-5737-4824-a541-c721d5b76ea2
     Resources:
     - name: Default
-      pathPrefix: Characters/NPC-1
+      pathPrefix: Characters/Ellina
       guid: 956ebf8f0e1fc584fa8d7333dc2cae04
     - name: Happy
-      pathPrefix: Characters/NPC-1
+      pathPrefix: Characters/Ellina
       guid: b18f0ec83d80df645bcfa7fb90912c64
     - name: Upset
-      pathPrefix: Characters/NPC-1
+      pathPrefix: Characters/Ellina
       guid: c0ad0e52132bcec42a2c5659a551fa8d
   - Id: Scripts
     Resources:
-    - name: Test
+    - name: Entry
       pathPrefix: Scripts
-      guid: 68b221eaa68e2124b82f50fe2edcc26e
-    - name: Test2
+      guid: 88e219ae22073aa43951f5c273a09339
+    - name: Map
       pathPrefix: Scripts
-      guid: 1cc79247a98543c48b70983316e5ef67
-    - name: Test3
+      guid: 40a3a227cca8bd54ab1f4f57a8dd0937
+    - name: Sacred_Grove
       pathPrefix: Scripts
-      guid: 81c69a6aae18dc04a9e75a5e697da0e0
+      guid: e986716d3face7b4ba1a45fa59a181c9
+    - name: Sunken_Sanctuary
+      pathPrefix: Scripts
+      guid: 163e04c77ebcb5544bce7c233cb7f94a
+    - name: Temple_of_Whispers
+      pathPrefix: Scripts
+      guid: 9cae55a4da5ed804db6f3abb157322ae
   - Id: Characters/706de22c-a541-4fb3-b267-498e0876b7e1
     Resources:
     - name: Default
-      pathPrefix: Characters/NPC-2
+      pathPrefix: Characters/Tarya
       guid: 62c446f5e2f7acb429fd6793705ac9e7
     - name: Happy
-      pathPrefix: Characters/NPC-2
+      pathPrefix: Characters/Tarya
       guid: 6459bdd13ff467c43aa27349096bc737
     - name: Upset
-      pathPrefix: Characters/NPC-2
+      pathPrefix: Characters/Tarya
       guid: efebbc1182b5f664bb6d8d826749746e
   - Id: Unlockables
+    Resources:
+    - name: Rune
+      pathPrefix: Unlockables
+      guid: 3e486648d10efbf4e92ac85e743fcfc4
+  - Id: Characters/6471a92c-3876-456d-a876-625163610aa1
     Resources: []

@@ -1,3 +1,4 @@
 @input PlayerName summary:"Choose your name."
-@goto Ellina_Intro
 @stop
+Player: So its me
+@goto Sacred_Grove.Ellina_Intro

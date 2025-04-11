@@ -1,4 +1,3 @@
-@goto .Ellina_Intro if:questStage==""
 @goto .Final_Choice if:questStage=="return_to_ellina"
 
 # Ellina_Intro
@@ -10,6 +9,7 @@ Ellina: Seek out the Seeress Tarya — she hides in the old temple to the east. 
 
 @questlog logType:Start text:"Find Seeress Tarya in the eastern temple"
 @set questStage="find_tarya"
+@showUI MapButton
 
 @stop
 
@@ -29,9 +29,9 @@ Narrator: You have to choose...
 @questlog logType:Update text:"Make a decision"
 @set questStage="make_decision"
 
-@choice "Give artifact to Ellina" goto:Ellina_End
-@choice "Give artifact to Tarya" goto:Tarya_End
-@choice "Keep artifact" goto:Keep_Rune
+@choice "Give artifact to Ellina" goto:.Ellina_End
+@choice "Give artifact to Tarya" goto:.Tarya_End
+@choice "Keep artifact" goto:.Keep_Rune
 @stop
 
 # Ellina_End
@@ -42,7 +42,7 @@ Narrator: You have to choose...
 Ellina: You made the right choice, {PlayerName}.
 Ellina: We will protect the world from what this thing could bring.
 
-@goto Outro
+@goto .Outro
 @stop
 
 # Tarya_End

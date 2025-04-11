@@ -14,17 +14,18 @@ Tarya: Find an old rune in the nearby ruins. It will unlock the way.
 
 @questlog logType:Update text:"Find the Rune in ruins"
 @set questStage="find_rune"
+@showUI MapButton
 
 @stop
 
 # Tarya_Empty
 
-@char Player
 Player: Looks like Tarya vanished...  
 Player: I’ll head back to Ellina. She deserves to know what I’ve found.  
 
 @questlog logType:Update text:"Return to Ellina"
 @set questStage="return_to_ellina"
+@showUI MapButton
 
 @stop
 

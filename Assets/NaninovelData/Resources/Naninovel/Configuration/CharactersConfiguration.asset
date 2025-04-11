@@ -65,8 +65,8 @@ MonoBehaviour:
     Poses: []
   Metadata:
     ids:
-    - NPC-1
-    - NPC-2
+    - Ellina
+    - Tarya
     - Player
     metas:
     - Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
@@ -95,7 +95,7 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 1
-      DisplayName: NPC-1
+      DisplayName: Ellina
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -137,7 +137,7 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 1
-      DisplayName: NPC-2
+      DisplayName: Tarya
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}

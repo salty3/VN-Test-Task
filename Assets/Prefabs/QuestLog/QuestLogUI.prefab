@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 8910463210721783636}
   - component: {fileID: 305366571761499957}
   - component: {fileID: 5590852049582693432}
+  - component: {fileID: 7984537601189247684}
   m_Layer: 5
   m_Name: QuestLogUI
   m_TagString: Untagged
@@ -216,6 +217,18 @@ MonoBehaviour:
   controlsLegend: {fileID: 0}
   fontChangeConfiguration: []
   _questText: {fileID: 2128910024500835754}
+--- !u!225 &7984537601189247684
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4128487380080707520}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4597190134890215585
 GameObject:
   m_ObjectHideFlags: 0
