@@ -1,0 +1,3 @@
+@input PlayerName summary:"Choose your name."
+@goto Ellina_Intro
+@stop

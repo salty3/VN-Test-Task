@@ -1,0 +1,16 @@
+Narrator: You find a rune covered in moss and glowing faintly with ancient light.
+
+; Show rune
+
+Narrator: You discover the artifact. It glows softly, as if waiting for you.
+Narrator: As you pick it up, the structure begins to collapse.
+Narrator: There’s no way back.
+
+@unlock Rune
+@questlog logType:Update text:"Return to Tarya"
+@set questStage="return_to_tarya"
+
+@showUI Map
+@goto Map
+
+@stop

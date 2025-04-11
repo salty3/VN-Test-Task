@@ -1,0 +1,10 @@
+There should be more advanced quest system for IDE autocompletion.
+I think we can add custom Configuration with quests and stages and service for handling it.
+But just txt stages for now.
+
+find_tarya
+find_rune
+make_decision
+return_to_ellina
+return_to_tarya
+completed

@@ -1,0 +1,74 @@
+@goto .Ellina_Intro if:questStage==""
+@goto .Final_Choice if:questStage=="return_to_ellina"
+
+# Ellina_Intro
+
+@char Ellina
+Ellina: Good to see you, {PlayerName}. We have troubling news.
+Ellina: An ancient artifact has awakened. If it falls into the wrong hands, it could bring disaster.
+Ellina: Seek out the Seeress Tarya — she hides in the old temple to the east. She knows what must be done.
+
+@questlog logType:Start text:"Find Seeress Tarya in the eastern temple"
+@set questStage="find_tarya"
+
+@stop
+
+# Final_Choice
+
+@char Ellina
+@char Tarya
+
+Narrator: As you return with the rune, you see both Ellina and Tarya waiting for you.
+Ellina: {PlayerName}, you're back. We feared the worst.
+Tarya: You have it, don't you? The rune... and the artifact.
+Narrator: They both step forward. The air is tense.
+Ellina: Listen, {PlayerName}, this power must be protected — not studied!
+Tarya: Protected? Or locked away forever? Let me understand it — we can use it for good.
+Narrator: You have to choose...
+
+@questlog logType:Update text:"Make a decision"
+@set questStage="make_decision"
+
+@choice "Give artifact to Ellina" goto:Ellina_End
+@choice "Give artifact to Tarya" goto:Tarya_End
+@choice "Keep artifact" goto:Keep_Rune
+@stop
+
+# Ellina_End
+
+@char Ellina.Happy
+@char Tarya.Upset
+
+Ellina: You made the right choice, {PlayerName}.
+Ellina: We will protect the world from what this thing could bring.
+
+@goto Outro
+@stop
+
+# Tarya_End
+@char Ellina.Upset
+@char Tarya.Happy
+
+Tarya: Finally. I will learn its secrets. Ellina would have locked it away and wasted its potential.
+
+@goto .Outro
+@stop
+
+# Selfish_End
+
+@char Ellina.Upset
+@char Tarya.Upset
+
+Ellina: I trusted you, {PlayerName}...
+Tarya: That was foolish. You have no idea what you’re doing.
+
+@goto .Outro
+
+# Outro
+Narrator: The choice has been made. The artifact's fate is sealed... for now.
+
+@questlog logType:Complete text:""
+@set questStage="completed"
+
+@stop
+

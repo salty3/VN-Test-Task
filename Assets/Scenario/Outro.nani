@@ -1,0 +1,5 @@
+Narrator: The choice has been made. The artifact's fate is sealed... for now.
+
+@questlog logType:Complete text:""
+
+@stop

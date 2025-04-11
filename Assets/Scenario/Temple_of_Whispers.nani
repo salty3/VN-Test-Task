@@ -1,0 +1,30 @@
+@goto .Tarya_Intro if:questStage=="find_tarya"
+@goto .Tarya_Empty if:questStage=="return_to_tarya"
+
+# Tarya_Intro
+@char Tarya
+Tarya: So... Ellina finally made her move. Interesting.
+Tarya: The artifact is stirring. But first — prove you're ready. Face the trial.
+
+@cardGame
+
+Tarya: Whether you succeeded or not… you're still standing.
+Tarya: The artifact lies in the Sunken Sanctuary. But the path is sealed.
+Tarya: Find an old rune in the nearby ruins. It will unlock the way.
+
+@questlog logType:Update text:"Find the Rune in ruins"
+@set questStage="find_rune"
+
+@stop
+
+# Tarya_Empty
+
+@char Player
+Player: Looks like Tarya vanished...  
+Player: I’ll head back to Ellina. She deserves to know what I’ve found.  
+
+@questlog logType:Update text:"Return to Ellina"
+@set questStage="return_to_ellina"
+
+@stop
+
