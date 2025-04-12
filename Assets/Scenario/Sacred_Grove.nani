@@ -31,7 +31,7 @@ Narrator: You have to choose...
 
 @choice "Give artifact to Ellina" goto:.Ellina_End
 @choice "Give artifact to Tarya" goto:.Tarya_End
-@choice "Keep artifact" goto:.Keep_Rune
+@choice "Keep artifact" goto:.Selfish_End
 @stop
 
 # Ellina_End
