@@ -1,0 +1,3 @@
+TaryaPlace: Sector Delta
+EllinaPlace: Neon Hub
+ArtifactPlace: Tech Ruins

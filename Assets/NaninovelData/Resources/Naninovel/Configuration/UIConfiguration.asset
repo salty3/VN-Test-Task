@@ -28,5 +28,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   OverrideObjectsLayer: 1
   ObjectsLayer: 6
-  FontOptions: []
-  DefaultFont: 
+  FontOptions:
+  - FontName: Aldrich-Regular
+    FontResource: Aldrich-Regular SDF
+    ApplyOnLocale: 
+  DefaultFont: Aldrich-Regular SDF

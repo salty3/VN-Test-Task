@@ -1,0 +1,3 @@
+Ellina: Ellina
+Player: { PlayerName }
+Tarya: Tarya

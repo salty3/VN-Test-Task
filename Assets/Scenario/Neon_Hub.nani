@@ -3,7 +3,7 @@
 # Ellina_Intro
 
 @char Ellina
-Ellina: Good to see you, {PlayerName}. We have troubling news.
+Ellina: Good to see you, {playerName}. We have troubling news.
 Ellina: An ancient artifact has awakened. If it falls into the wrong hands, it could bring disaster.
 Ellina: Seek out the Seeress Tarya — she hides in the old temple to the east. She knows what must be done.
 
@@ -19,10 +19,10 @@ Ellina: Seek out the Seeress Tarya — she hides in the old temple to the east. 
 @char Tarya
 
 Narrator: As you return with the rune, you see both Ellina and Tarya waiting for you.
-Ellina: {PlayerName}, you're back. We feared the worst.
+Ellina: {playerName}, you're back. We feared the worst.
 Tarya: You have it, don't you? The rune... and the artifact.
 Narrator: They both step forward. The air is tense.
-Ellina: Listen, {PlayerName}, this power must be protected — not studied!
+Ellina: Listen, {playerName}, this power must be protected — not studied!
 Tarya: Protected? Or locked away forever? Let me understand it — we can use it for good.
 Narrator: You have to choose...
 
@@ -39,7 +39,7 @@ Narrator: You have to choose...
 @char Ellina.Happy
 @char Tarya.Upset
 
-Ellina: You made the right choice, {PlayerName}.
+Ellina: You made the right choice, {playerName}.
 Ellina: We will protect the world from what this thing could bring.
 
 @goto .Outro
@@ -59,7 +59,7 @@ Tarya: Finally. I will learn its secrets. Ellina would have locked it away and w
 @char Ellina.Upset
 @char Tarya.Upset
 
-Ellina: I trusted you, {PlayerName}...
+Ellina: I trusted you, {playerName}...
 Tarya: That was foolish. You have no idea what you’re doing.
 
 @goto .Outro
