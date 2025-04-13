@@ -71,13 +71,11 @@ namespace Minigames.CardFlip.Card
             
             if (_isSelected)
             {
-                await Deselect();
+                return;
             }
-            else
-            {
-                await Select();
-            }
-            
+
+            await Select();
+
             Clicked.Invoke();
         }
     }

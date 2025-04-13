@@ -1,4 +1,4 @@
-﻿using System.Threading;
+﻿using System;
 using Naninovel;
 using UnityEngine;
 
@@ -6,9 +6,9 @@ namespace Game.Scripts.Application
 {
     public class Initializer : MonoBehaviour
     {
-        private async void Start()
+        private void Start()
         {
-            await RuntimeInitializer.InitializeAsync();
+            RuntimeInitializer.InitializeAsync().Forget();
         }
     }
 }

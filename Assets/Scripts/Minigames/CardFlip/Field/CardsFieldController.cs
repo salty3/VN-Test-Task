@@ -87,8 +87,8 @@ namespace Minigames.CardFlip.Field
         public async UniTask Shuffle()
         {
             int seed = Random.Range(int.MinValue, int.MaxValue);
+            _cardControllers.ForEach(c => c.Deselect().Forget());
             _cardControllers.Shuffle(seed);
-            //_levelsService.ShuffleField(_levelEntity.LevelIndex, seed);
 
             for (var i = 0; i < _cardControllers.Count; i++)
             {

@@ -110,7 +110,7 @@ MonoBehaviour:
       guid: 671ceb4f549ddf046913d7debf113469
     - name: LoadingUI
       pathPrefix: UI
-      guid: 53aad00e5cf184e458adb001c550518a
+      guid: afc0694590b5a654a9b49e2b92c7d52a
     - name: MovieUI
       pathPrefix: UI
       guid: f9a211517d1cb1a44964dc2254463049
