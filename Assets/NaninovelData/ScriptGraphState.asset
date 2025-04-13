@@ -16,35 +16,42 @@ MonoBehaviour:
   - scriptName: Entry
     position:
       serializedVersion: 2
-      x: 0
+      x: 376
       y: 0
-      width: 133.6
+      width: 190.40002
       height: 100.8
+  - scriptName: Neon_Hub
+    position:
+      serializedVersion: 2
+      x: 691.2
+      y: 168.8
+      width: 177.59998
+      height: 436.80002
+  - scriptName: Sector_Delta
+    position:
+      serializedVersion: 2
+      x: -112
+      y: -60.8
+      width: 148
+      height: 220.8
+  - scriptName: Tech_Ruins
+    position:
+      serializedVersion: 2
+      x: 147.2
+      y: 193.59999
+      width: 127.2
+      height: 172.80002
   - scriptName: Map
     position:
       serializedVersion: 2
-      x: 412.8
-      y: 43.2
+      x: 206.4
+      y: 427.2
       width: 72
-      height: 76.8
-  - scriptName: Sacred_Grove
+      height: 76.79999
+  - scriptName: Title
     position:
       serializedVersion: 2
-      x: -244
-      y: 100
-      width: 172.8
-      height: 412.8
-  - scriptName: Sunken_Sanctuary
-    position:
-      serializedVersion: 2
-      x: 172.8
-      y: 59.2
-      width: 152.8
-      height: 100.8
-  - scriptName: Temple_of_Whispers
-    position:
-      serializedVersion: 2
-      x: 20.8
-      y: 469.6
-      width: 164.8
-      height: 172.80002
+      x: 52.8
+      y: 482.40002
+      width: 72
+      height: 76.79999

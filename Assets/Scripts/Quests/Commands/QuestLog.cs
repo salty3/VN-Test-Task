@@ -25,7 +25,7 @@ namespace Quests.Commands
             switch (logType)
             {
                 case QuestLogType.Start:
-                    questLogUi.ChangeVisibilityAsync(true, 0.3f, asyncToken);
+                    await questLogUi.ChangeVisibilityAsync(true, 0.3f, asyncToken);
                     await questLogUi.StartQuest(Text);
                     break;
                 case QuestLogType.Update:
@@ -33,7 +33,7 @@ namespace Quests.Commands
                     break;
                 case QuestLogType.Complete:
                     questLogUi.CompleteQuest();
-                    questLogUi.ChangeVisibilityAsync(false, 0.3f, asyncToken);
+                    await questLogUi.ChangeVisibilityAsync(false, 0.3f, asyncToken);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

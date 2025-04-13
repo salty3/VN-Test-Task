@@ -32,4 +32,4 @@ MonoBehaviour:
   - FontName: Aldrich-Regular
     FontResource: Aldrich-Regular SDF
     ApplyOnLocale: 
-  DefaultFont: Aldrich-Regular SDF
+  DefaultFont: Aldrich-Regular

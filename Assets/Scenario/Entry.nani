@@ -1,4 +1,5 @@
 @back Title
+@bgm Ambient
 @input playerName summary:"Choose your name."
 @stop
 @goto Neon_Hub.Ellina_Intro
