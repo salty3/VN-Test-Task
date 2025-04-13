@@ -13,7 +13,6 @@ namespace Minigames.CardFlip.UI.EndScreen
         
         public void Show()
         {
-            Debug.Log("show");
             GameObject.SetActive(true);
         }
         

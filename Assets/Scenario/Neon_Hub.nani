@@ -1,16 +1,19 @@
+@back NeonHub
+
 @goto .Final_Choice if:questStage=="return_to_ellina"
+@goto .Common
 
 # Ellina_Intro
 
+@back NeonHub
 @char Ellina
-Ellina: Good to see you, {playerName}. We have troubling news.
-Ellina: An ancient artifact has awakened. If it falls into the wrong hands, it could bring disaster.
-Ellina: Seek out the Seeress Tarya — she hides in the old temple to the east. She knows what must be done.
+Ellina: You're late, {playerName}. Something’s stirring in the Net — and it’s not just another glitch.
+Ellina: An old AI fragment resurfaced. Dangerous code. Untraceable.
+Ellina: You need to find Tarya. She's hiding in an abandoned server farm in Sector Delta. She's the only one who might decrypt this mess.
 
-@questlog logType:Start text:"Find Seeress Tarya in the eastern temple"
+@questlog logType:Start text:"Find Tarya in Sector Delta"
 @set questStage="find_tarya"
 @showUI MapButton
-
 @stop
 
 # Final_Choice
@@ -18,38 +21,43 @@ Ellina: Seek out the Seeress Tarya — she hides in the old temple to the east. 
 @char Ellina
 @char Tarya
 
-Narrator: As you return with the rune, you see both Ellina and Tarya waiting for you.
-Ellina: {playerName}, you're back. We feared the worst.
-Tarya: You have it, don't you? The rune... and the artifact.
-Narrator: They both step forward. The air is tense.
-Ellina: Listen, {playerName}, this power must be protected — not studied!
-Tarya: Protected? Or locked away forever? Let me understand it — we can use it for good.
-Narrator: You have to choose...
+Narrator: As you step into the Hub, you spot both Ellina and Tarya waiting. Neither looks happy to see the other.
+Ellina: So you found it… and brought her back too. Wonderful.
 
-@questlog logType:Update text:"Make a decision"
-@set questStage="make_decision"
+Tarya: Miss me, Ellina? Relax. I’m just here for the code.
+Narrator: The shard flickers in your hand, reacting to their presence.
+Ellina: That code has the potential to wipe clean half the Grid. We lock it down — no experiments.
+Tarya: Or we use it. Control it. It’s a weapon, {playerName}. A powerful one.
+Narrator: The decision is yours...
 
-@choice "Give artifact to Ellina" goto:.Ellina_End
-@choice "Give artifact to Tarya" goto:.Tarya_End
-@choice "Keep artifact" goto:.Selfish_End
+@questlog logType:Complete
+@set questStage="completed"
+
+@choice "Give the shard to Ellina" goto:.Ellina_End
+@choice "Give the shard to Tarya" goto:.Tarya_End
+@choice "Keep it for yourself" goto:.Selfish_End
 @stop
 
 # Ellina_End
 
-@char Ellina.Happy
-@char Tarya.Upset
+@lock Shard
 
-Ellina: You made the right choice, {playerName}.
-Ellina: We will protect the world from what this thing could bring.
+@char Ellina.Happy
+Ellina: You did the right thing, {playerName}. Someone had to make the hard call.
+@char Tarya.Upset
+Tarya: Coward. You gave it to the system — again.
 
 @goto .Outro
 @stop
 
 # Tarya_End
-@char Ellina.Upset
-@char Tarya.Happy
 
-Tarya: Finally. I will learn its secrets. Ellina would have locked it away and wasted its potential.
+@lock Shard
+
+@char Tarya.Happy
+Tarya: Finally. Someone who thinks beyond firewalls and fear.
+@char Ellina.Upset
+Ellina: I hope you can live with what comes next.
 
 @goto .Outro
 @stop
@@ -57,18 +65,38 @@ Tarya: Finally. I will learn its secrets. Ellina would have locked it away and w
 # Selfish_End
 
 @char Ellina.Upset
-@char Tarya.Upset
+Ellina: You can’t be serious. You have no idea what that thing can do.
 
-Ellina: I trusted you, {playerName}...
-Tarya: That was foolish. You have no idea what you’re doing.
+@char Tarya.Upset
+Tarya: Fine. You want to play god? Don't expect mercy when it breaks you.
 
 @goto .Outro
 
 # Outro
 Narrator: The choice has been made. The artifact's fate is sealed... for now.
 
-@questlog logType:Complete text:""
-@set questStage="completed"
-
+@title
 @stop
+
+# Common
+
+@char Ellina
+
+@if questStage=="find_tarya"
+    Ellina: Still here? Tarya won’t decrypt herself, you know.
+    Ellina: The longer you stall, the deeper that fragment burrows.
+    @showUI MapButton
+    @stop
+
+@else if:questStage=="find_rune"
+    Ellina: You're back already? I thought you were headed to the Depths.
+    Ellina: Don't tell me Tarya changed her mind again...
+    @showUI MapButton
+    @stop
+
+@else
+    Ellina: You have it... don’t you? The shard.
+    Ellina: We need to act. Where’s Tarya?
+    @showUI MapButton
+    @stop
 

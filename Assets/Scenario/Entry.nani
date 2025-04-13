@@ -1,3 +1,4 @@
+@back Title
 @input playerName summary:"Choose your name."
 @stop
 @goto Neon_Hub.Ellina_Intro

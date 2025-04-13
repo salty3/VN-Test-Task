@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using JetBrains.Annotations;
 using Minigames.CardFlip.Field;
 using Minigames.CardFlip.Levels;
 using Naninovel;
@@ -9,12 +10,13 @@ using UnityEngine.SceneManagement;
 namespace Minigames.CardFlip
 {
     [InitializeAtRuntime]
+    [UsedImplicitly]
     public class CardGameService : ICardGameService
     {
         private CardGameConfiguration _configuration;
 
-        private IInputManager _inputManager;
-        private ICameraManager _cameraManager;
+        private readonly IInputManager _inputManager;
+        private readonly ICameraManager _cameraManager;
         
         public CardGameService(IInputManager inputManager, ICameraManager cameraManager)
         {
@@ -30,6 +32,10 @@ namespace Minigames.CardFlip
             
             var scene = _configuration.GameScene;
             await scene.LoadSceneAsync(LoadSceneMode.Additive);
+            
+            var canvasGroup = scene.GetRootObject<CanvasGroup>();
+            canvasGroup.alpha = 0;
+            await canvasGroup.DOFade(1, 1f).SetEase(Ease.OutSine).AsyncWaitForCompletion();
 
             var cardGameController = scene.GetRootObject<CardGameController>();
 
@@ -40,6 +46,8 @@ namespace Minigames.CardFlip
             cardGameController.GameEnded.AddListener(() => gameOperation.TrySetResult());
             
             await gameOperation.Task;
+            
+            await canvasGroup.DOFade(0, 1f).SetEase(Ease.OutSine).AsyncWaitForCompletion();
             
             await scene.UnloadSceneAsync();
             

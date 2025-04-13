@@ -29,7 +29,7 @@ namespace Minigames.CardFlip
             endState.ContinueClicked.AddListener(GameEnded.Invoke);
             
             _gameplayLoopStateManager = new GameplayLoopStateManager(
-                new PreparationPhaseState(levelData, cardsFieldEntity, _cardsFieldController),
+                new PreparationPhaseState(levelData, cardsFieldEntity, _cardsFieldController, _infoPanelController),
                 new ShowCardsState(_cardsFieldController),
                 new PlayerInteractionState(levelData, _cardsFieldController, _infoPanelController),
                 new ShuffleCardsState(_cardsFieldController),

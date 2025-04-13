@@ -153,6 +153,9 @@ MonoBehaviour:
     - name: MapButton
       pathPrefix: UI
       guid: bd3752c94a2d53341ac0f381047b173f
+    - name: InventoryUI
+      pathPrefix: UI
+      guid: 3f90fd843a8090648960a0a53cc531bc
   - Id: Characters/bd3b6bbe-e6ab-49da-8a4e-043a2024204a
     Resources: []
   - Id: Characters/2ffc9de2-5737-4824-a541-c721d5b76ea2
@@ -171,9 +174,6 @@ MonoBehaviour:
     - name: Entry
       pathPrefix: Scripts
       guid: 88e219ae22073aa43951f5c273a09339
-    - name: Map
-      pathPrefix: Scripts
-      guid: 40a3a227cca8bd54ab1f4f57a8dd0937
     - name: Neon_Hub
       pathPrefix: Scripts
       guid: 5b799975605513342b51f07d6dd071fa
@@ -183,6 +183,12 @@ MonoBehaviour:
     - name: Tech_Ruins
       pathPrefix: Scripts
       guid: ab21e890627ae534bb344dadb99e53da
+    - name: Map
+      pathPrefix: Scripts
+      guid: 40a3a227cca8bd54ab1f4f57a8dd0937
+    - name: Title
+      pathPrefix: Scripts
+      guid: 6eb5281a11a0f49428a072724e7087f6
   - Id: Characters/706de22c-a541-4fb3-b267-498e0876b7e1
     Resources:
     - name: Default
@@ -196,8 +202,22 @@ MonoBehaviour:
       guid: efebbc1182b5f664bb6d8d826749746e
   - Id: Unlockables
     Resources:
-    - name: Rune
+    - name: Shard
       pathPrefix: Unlockables
       guid: 3e486648d10efbf4e92ac85e743fcfc4
   - Id: Characters/6471a92c-3876-456d-a876-625163610aa1
     Resources: []
+  - Id: Backgrounds/3d930127-0735-445b-83bf-f4bf96228ad0
+    Resources:
+    - name: NeonHub
+      pathPrefix: Backgrounds/MainBackground
+      guid: 45ea3861efceab845975e868c03ca504
+    - name: SectorDelta
+      pathPrefix: Backgrounds/MainBackground
+      guid: c550d42d58bdc934986d29e3334206d4
+    - name: TechRuins
+      pathPrefix: Backgrounds/MainBackground
+      guid: 68651ade933168747a39031e5866e593
+    - name: Title
+      pathPrefix: Backgrounds/MainBackground
+      guid: 8bb1f576618a65a4fa0eb05837852a22

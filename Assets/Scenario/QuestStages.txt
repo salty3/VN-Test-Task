@@ -4,7 +4,6 @@ But just txt stages for now.
 
 find_tarya
 find_rune
-make_decision
 return_to_ellina
 return_to_tarya
 completed

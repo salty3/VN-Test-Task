@@ -13,14 +13,14 @@ namespace Minigames.CardFlip.UI.InfoPanel
         
         public Button ShuffleButton => _shuffleButton;
         
-        public void SetMatchCount(int count)
+        public void SetMatchCount(int count, int maxCount)
         {
-            _matchCountText.text = $"Matches: {count}";
+            _matchCountText.text = $"Matches: {count}/{maxCount}";
         }
         
-        public void SetMismatchCount(int count)
+        public void SetMismatchCount(int count, int maxCount)
         {
-            _mismatchCountText.text = $"Mismatches: {count}";
+            _mismatchCountText.text = $"Mismatches: {count}/{maxCount}";
         }
     }
 }

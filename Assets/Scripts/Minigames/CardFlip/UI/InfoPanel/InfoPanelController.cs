@@ -10,14 +10,14 @@ namespace Minigames.CardFlip.UI.InfoPanel
 
         public UnityEvent ShuffleButtonClicked => _view.ShuffleButton.onClick;
         
-        public void SetMatchCount(int count)
+        public void SetMatchCount(int count, int maxCount)
         {
-            _view.SetMatchCount(count);
+            _view.SetMatchCount(count, maxCount);
         }
         
-        public void SetMismatchCount(int count)
+        public void SetMismatchCount(int count, int maxCount)
         {
-            _view.SetMismatchCount(count);
+            _view.SetMismatchCount(count, maxCount);
         }
     }
 }

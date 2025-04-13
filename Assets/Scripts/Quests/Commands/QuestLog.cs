@@ -11,7 +11,6 @@ namespace Quests.Commands
         [ConstantContext(typeof(QuestLogType))]
         public StringParameter LogType;
         
-        [RequiredParameter]
         public StringParameter Text;
         
         public override async UniTask ExecuteAsync(AsyncToken asyncToken = default)
@@ -22,22 +21,19 @@ namespace Quests.Commands
             }
             
             var questLogUi = Engine.GetService<IUIManager>().GetUI<IQuestLogUI>();
-
             
-            //TODO: await for animations
             switch (logType)
             {
                 case QuestLogType.Start:
-                    questLogUi.Show();
-                    questLogUi.StartQuest(Text);
+                    questLogUi.ChangeVisibilityAsync(true, 0.3f, asyncToken);
+                    await questLogUi.StartQuest(Text);
                     break;
                 case QuestLogType.Update:
-                    questLogUi.UpdateQuest(Text);
+                    await questLogUi.UpdateQuest(Text);
                     break;
                 case QuestLogType.Complete:
-                    questLogUi.CompleteQuest(Text);
-                    await UniTask.Delay(TimeSpan.FromSeconds(1));
-                    questLogUi.Hide();
+                    questLogUi.CompleteQuest();
+                    questLogUi.ChangeVisibilityAsync(false, 0.3f, asyncToken);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

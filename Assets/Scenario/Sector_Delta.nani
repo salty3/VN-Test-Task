@@ -1,21 +1,23 @@
+@back SectorDelta
+
 @goto .Tarya_Intro if:questStage=="find_tarya"
 @goto .Tarya_Empty if:questStage=="return_to_tarya"
+@goto .Common
 
 # Tarya_Intro
 @char Tarya
-Tarya: So... Ellina finally made her move. Interesting.
-Tarya: The artifact is stirring. But first — prove you're ready. Face the trial.
+Tarya: You? Ellina sent you? Hah. She's still playing savior?
+Tarya: This fragment... it's ancient. Possibly pre-Collapse. If you're serious, you’ll need to pass a test. Nothing personal — just protocol.
 
 @cardGame
 
-Tarya: Whether you succeeded or not… you're still standing.
-Tarya: The artifact lies in the Sunken Sanctuary. But the path is sealed.
-Tarya: Find an old rune in the nearby ruins. It will unlock the way.
+Tarya: Well, you're not dead. That’s something.
+Tarya: The core’s in the flooded vault under Neon Depths. Locked behind legacy encryption.
+Tarya: Find the activation shard. Without it, you’re just sightseeing.
 
-@questlog logType:Update text:"Find the Rune in ruins"
+@questlog logType:Update text:"Find the Shard in ruins"
 @set questStage="find_rune"
 @showUI MapButton
-
 @stop
 
 # Tarya_Empty
@@ -26,6 +28,13 @@ Player: I’ll head back to Ellina. She deserves to know what I’ve found.
 @questlog logType:Update text:"Return to Ellina"
 @set questStage="return_to_ellina"
 @showUI MapButton
+@stop
 
+# Common
+
+Narrator: Tarya’s nowhere to be found. Just the hum of cold servers.
+Player: She’s probably already tracking the artifact from somewhere else.
+
+@showUI MapButton
 @stop
 

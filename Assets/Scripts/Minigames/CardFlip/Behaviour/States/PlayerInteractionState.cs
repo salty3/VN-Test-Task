@@ -41,8 +41,8 @@ namespace Minigames.CardFlip.Behaviour.States
             _cardsFieldController.UnblockInteraction();
             
             //There should be some reactive way to update the UI
-            _infoPanelController.SetMatchCount(_matchesCount);
-            _infoPanelController.SetMismatchCount(_mismatchesCount);
+            _infoPanelController.SetMatchCount(_matchesCount, _maxMatchesCount);
+            _infoPanelController.SetMismatchCount(_mismatchesCount, _maxMismatchesCount);
         }
 
         public override void Dispose()
@@ -65,7 +65,7 @@ namespace Minigames.CardFlip.Behaviour.States
             _cardsFieldController.CompletePair(pairId);
             
             
-            _infoPanelController.SetMatchCount(_matchesCount);
+            _infoPanelController.SetMatchCount(_matchesCount, _maxMatchesCount);
             if (_matchesCount == _maxMatchesCount)
             {
                 StateManager.SwitchToState<EndState>();
@@ -76,7 +76,7 @@ namespace Minigames.CardFlip.Behaviour.States
         {
             _mismatchesCount++;
             
-            _infoPanelController.SetMismatchCount(_mismatchesCount);
+            _infoPanelController.SetMismatchCount(_mismatchesCount, _maxMismatchesCount);
             if (_mismatchesCount >= _maxMismatchesCount)
             {
                 StateManager.SwitchToState<EndState>();

@@ -1,16 +1,30 @@
-Narrator: You find a rune covered in moss and glowing faintly with ancient light.
+@back TechRuins
 
-; Show rune
+@goto .Shard if:questStage=="find_rune"
+@goto .Common
 
-Narrator: You discover the artifact. It glows softly, as if waiting for you.
+
+# Shard
+
+Narrator: You dig through broken drones and collapsed data towers — and there it is. The shard hums, pulsing with raw power.
+
+@unlock Shard
+@showUI InventoryUI
+
 Narrator: As you pick it up, the structure begins to collapse.
 Narrator: There’s no way back.
 
-@unlock Rune
+
 @questlog logType:Update text:"Return to Tarya"
 @set questStage="return_to_tarya"
 @set ruinsOpen=false
+@showUI MapUI
+@stop
+
+# Common
+
+Narrator: The gates won’t respond. Legacy encryption blocks your signal.
+Player: Yeah… definitely not my lane yet.
 
 @showUI MapUI
-
 @stop

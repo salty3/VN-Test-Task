@@ -1,2 +1,4 @@
-Player: Where should I go?
+@showUI MapUI
+@hideUI MapButton
+@hideChars
 @stop
